@@ -8,9 +8,9 @@ pf = PetFriends()
 def test_get_api_key_for_valid_user(email=valid_email, password=valid_password):
     """ Проверяем что запрос api ключа возвращает статус 200 и в результате содержится слово key"""
 
-    status, resalt = pf.get_api_key(email, password)
+    status, result = pf.get_api_key(email, password)
     assert status == 200
-    assert "key" in resalt
+    assert "key" in result
 
 
 def test_get_api_pets_valid_key(filter=""):
